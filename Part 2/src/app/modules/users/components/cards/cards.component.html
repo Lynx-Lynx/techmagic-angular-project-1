@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="api">
+    <div class="add-user-form">
+      <form [formGroup]="profileForm" class="profile-form">
+        <label for="first-name">First name: </label>
+        <input
+          class="add-user-form-input"
+          id="first-name"
+          type="text"
+          formControlName="firstName"
+          required
+        />
+        <label for="last-name">Last name: </label>
+        <input
+          class="add-user-form-input"
+          id="last-name"
+          type="text"
+          formControlName="lastName"
+          required
+        />
+        <label for="email">Email: </label>
+        <input
+          class="add-user-form-input"
+          id="email"
+          type="text"
+          formControlName="email"
+          required
+        />
+        <label for="phone">Phone: </label>
+        <input
+          class="add-user-form-input"
+          id="phone"
+          type="text"
+          formControlName="phone"
+          required
+        />
+      </form>
+      <button
+        class="submit-user"
+        type="submit"
+        [disabled]="!profileForm.valid"
+        (click)="onSubmit()"
+      >
+        Submit
+      </button>
+    </div>
+
+    <div class="user__cards">
+      <mat-card
+        class="user__card"
+        *ngFor="let user of users | filter: inputValue | sort: inputSelectValue"
+      >
+        <div class="user__card-checkbox">
+          <mat-checkbox
+            class="checkbox"
+            [(ngModel)]="user.isSelected"
+          ></mat-checkbox>
+        </div>
+        <div class="user__card-img">Image here</div>
+        <div class="user__card-header">
+          <h2 class="user__card-header-text">{{ user.name }}</h2>
+        </div>
+        <div class="user__card-info">
+          <p>{{ user.email }}</p>
+          <p>{{ user.phone }}</p>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

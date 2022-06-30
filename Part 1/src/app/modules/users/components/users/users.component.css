@@ -1,0 +1,78 @@
+.toolbar {
+  margin-bottom: 20px;
+}
+
+.toolbar__menu{
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+.toolbar-row-first {
+  border-bottom: 1px solid black;
+}
+
+.toolbar-row-second {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  padding-top: 1.34375em;
+}
+
+.toolbar__buttons {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.select-input, .search-input, .toolbar-btn {
+  font-size: 16px;
+}
+
+.toolbar-btn {
+  height: 59.5px;
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.user__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.user__card {
+  min-width: 150px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.user__card-header-text {
+  border-bottom: 1px solid white;
+}
+
+.user__card-header-text {
+  color: #dbadc0;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.user__card-checkbox, .user__card-id {
+  align-self: flex-end;
+}
+
+.user__card-img {
+  min-width: 150px;
+  min-height: 150px;
+  max-width: 250px;
+  max-height: 250px;
+  background-color: rgb(197, 197, 197);
+  align-self: center;
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 4px;
+  text-align: center;
+}

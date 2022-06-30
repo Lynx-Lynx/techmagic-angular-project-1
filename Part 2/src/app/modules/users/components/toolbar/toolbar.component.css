@@ -1,0 +1,36 @@
+.toolbar {
+  margin-bottom: 20px;
+}
+
+.toolbar__menu{
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+.toolbar-row-first {
+  border-bottom: 1px solid black;
+}
+
+.toolbar-row-second {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  padding-top: 1.34375em;
+}
+
+.toolbar__buttons {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.select-input, .search-input, .toolbar-btn {
+  font-size: 16px;
+}
+
+.toolbar-btn {
+  height: 59.5px;
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}

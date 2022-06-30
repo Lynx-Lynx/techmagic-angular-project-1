@@ -1,0 +1,40 @@
+<div class="toolbar">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row class="toolbar-row toolbar-row-first">
+      <span>Angular lecture 2</span>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="toolbar-row toolbar-row-second">
+      <div class="toolbar__menu">
+        <div class="toolbar__buttons">
+          <div class="toolbar-select-btn">
+            <button class="toolbar-btn" mat-button
+            (click)="selectAllUsers()">Select all</button>
+          </div>
+          <div class="toolbar-delete-btn">
+            <button class="toolbar-btn" mat-button
+           (click)="deleteUser()">Delete</button>
+          </div>
+        </div>
+        <div class="toolbar__sort">
+          <mat-form-field class="select-input" appearance="fill">
+            <mat-label>Sorting order</mat-label>
+            <mat-select [(ngModel)]="selectedValue" (ngModelChange)="setInputSelectValue()">
+              <mat-option *ngFor="let order of orders" [value]="order.value">
+                {{order.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="toolbar__search">
+        <mat-form-field class="search-input" appearance="fill">
+          <input class="form-field__input" matInput type="text" [(ngModel)]="value" (ngModelChange)="setInputValue()"
+          placeholder="Search users">
+          <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="setValue()">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
